@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import javax.swing.JFrame;
+import javax.swing.*;
 
 public class Main {
 
@@ -14,49 +14,58 @@ public class Main {
         System.out.println("Login (1) or new Account (2) ");
         int choice = Integer.parseInt(sc.nextLine());
 
-        String[][] customers = readFile();
-
-        String[] usernames = new String[customers.length];
-        String[] passwords = new String[customers.length];
-        for(int i = 0; i<customers.length; i++) {
-            usernames[i] = customers[i][0];
-            passwords[i] = customers[i][1];
-        }
+//        String[][] customers = readFile();
+//
+//        String[] usernames = new String[customers.length];
+//        String[] passwords = new String[customers.length];
+//        for(int i = 0; i<customers.length; i++) {
+//            usernames[i] = customers[i][0];
+//            passwords[i] = customers[i][1];
+//        }
 
 
 
         if (choice == 1) {
-            System.out.println("Username: ");
-            String user = sc.nextLine();
 
-            System.out.println("Password: ");
-            String pass = sc.nextLine();
+            //open new GUI for login
+            JFrame login = new Login();
+            login.setVisible(true);
+
+//            System.out.println("Username: ");
+//            String user = sc.nextLine();
+//
+//            System.out.println("Password: ");
+//            String pass = sc.nextLine();
+
+//            String user = ((Login) login).getUser();
+//            String pass = ((Login) login).getPass();
+
 
 //            printArray(usernames, "Username");
 //            printArray(passwords, "Password");
 
-            boolean found = false;
-
-            for (int i = 0; i < usernames.length; i++) {
-                //checking username
-                if(user.equals(usernames[i])) {
-                    //checking password
-                    if (pass.equals(passwords[i])) {
-                        //both checks passed
-                        found = true;
-                        System.out.println("Access Granted");
-
-                        //OPEN NEW WINDOW
-//						JFrame frame = new JFrame("Logged In");
-//						frame.setVisible(true);
-                    }
-                    break;
-                }
-            }
-
-            if (found == false) {
-                System.out.println("Invalid Details");
-            }
+//            boolean found = false;
+//
+//            for (int i = 0; i < usernames.length; i++) {
+//                //checking username
+//                if(user.equals(usernames[i])) {
+//                    //checking password
+//                    if (pass.equals(passwords[i])) {
+//                        //both checks passed
+//                        found = true;
+//                        System.out.println("Access Granted");
+//                    }
+//                    break;
+//                }
+//            }
+//
+//            if (found == false) {
+//                System.out.println("Invalid Details");
+//            } else {
+//                //OPEN NEW WINDOW
+////				JFrame frame = new JFrame("Logged In");
+////				frame.setVisible(true);
+//            }
 
         }
         else if (choice == 2) {
@@ -74,20 +83,80 @@ public class Main {
             String confirmPass = sc.nextLine();
 
             if(user.equals(confirmUser) && pass.equals(confirmPass)) {
+
+                //add account to CSV
+                String filePath = "files/Customers.csv";
+                String[] userData1 = {user, pass, "0"};
+
+                try {
+                    FileWriter fileWriter = new FileWriter(filePath, true);
+
+                    fileWriter.append("\n");
+
+                    // write user data
+                    fileWriter.append(userData1[0]);
+                    fileWriter.append(",");
+                    fileWriter.append(userData1[1]);
+                    fileWriter.append(",");
+                    fileWriter.append(userData1[2]);
+
+
+                    fileWriter.close();
+                    System.out.println("Data written to CSV file successfully!");
+                } catch (IOException e) {
+                    System.err.println("Error writing data to CSV file: " + e.getMessage());
+                }
+
                 System.out.println("Valid Details - adding account");
             } else {
                 System.out.println("Invalid Details");
             }
-
-
         } else {
             //something went wrong
+            System.out.println("Something went wrong");
         }
 
 
 
     }
 
+    public static boolean checkDetails(String user, String pass) throws IOException {
+        String[][] customers = readFile();
+
+        String[] usernames = new String[customers.length];
+        String[] passwords = new String[customers.length];
+        for(int i = 0; i<customers.length; i++) {
+            usernames[i] = customers[i][0];
+            passwords[i] = customers[i][1];
+        }
+
+
+
+        boolean found = false;
+
+        for (int i = 0; i < usernames.length; i++) {
+            //checking username
+            if(user.equals(usernames[i])) {
+                //checking password
+                if (pass.equals(passwords[i])) {
+                    //both checks passed
+                    found = true;
+                    System.out.println("Access Granted");
+                }
+                break;
+            }
+        }
+
+        if (found == false) {
+            System.out.println("Invalid Details");
+        } else {
+            //OPEN NEW WINDOW
+				JFrame menu = new Menu();
+				menu.setVisible(true);
+        }
+
+        return found;
+    }
 
     public static void printArray(String[] arr, String prefix) {
         for(int i = 0; i < arr.length; i++) {
