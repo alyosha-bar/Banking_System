@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71aa833a-209c-404f-8b14-84d06bebe060" name="Changes" comment="Add dashboard as a starting point and make login system work with GUI rather than console.">
-      <change afterPath="$PROJECT_DIR$/src/newAccount.java" afterDir="false" />
+    <list default="true" id="71aa833a-209c-404f-8b14-84d06bebe060" name="Changes" comment="Add GUI version of registration system.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/Customers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/files/Customers.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dashboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,13 +104,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683457787647</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add GUI version of registration system.">
+      <created>1683458747771</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683458747771</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding basis of &quot;Registration&quot; system" />
     <MESSAGE value="Start work on GUI with functional login system and beginnings of a Menu GUI." />
     <MESSAGE value="Add dashboard as a starting point and make login system work with GUI rather than console." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add dashboard as a starting point and make login system work with GUI rather than console." />
+    <MESSAGE value="Add GUI version of registration system." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add GUI version of registration system." />
   </component>
 </project>
