@@ -55,8 +55,8 @@ public class Dashboard extends JFrame {
 
                 // needs new GUI class
 
-//                JFrame newAccount = new newAccount();
-//                newAccount.setVisible(true);
+                JFrame newAccount = new newAccount();
+                newAccount.setVisible(true);
 
                 //change GUIs
                 setVisible(false);

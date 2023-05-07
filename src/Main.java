@@ -14,74 +14,62 @@ public class Main {
         dashboard.setVisible(true);
 
 
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Login (1) or new Account (2) ");
-        int choice = Integer.parseInt(sc.nextLine());
-
-//        String[][] customers = readFile();
+//        Scanner sc = new Scanner(System.in);
 //
-//        String[] usernames = new String[customers.length];
-//        String[] passwords = new String[customers.length];
-//        for(int i = 0; i<customers.length; i++) {
-//            usernames[i] = customers[i][0];
-//            passwords[i] = customers[i][1];
+//        System.out.println("Login (1) or new Account (2) ");
+//        int choice = Integer.parseInt(sc.nextLine());
+
+
+//        if (choice == 1) {
+//            //do nothing cus GUI exists
 //        }
-
-
-
-        if (choice == 1) {
-            //do nothing cus GUI exists
-        }
-        else if (choice == 2) {
-            //write to file
-            System.out.println("Username: ");
-            String user = sc.nextLine();
-            System.out.println("Confirm: ");
-            String confirmUser = sc.nextLine();
-
-            System.out.println("\n");
-
-            System.out.println("Password: ");
-            String pass = sc.nextLine();
-            System.out.println("Confirm: ");
-            String confirmPass = sc.nextLine();
-
-            if(user.equals(confirmUser) && pass.equals(confirmPass)) {
-
-                //add account to CSV
-                String filePath = "files/Customers.csv";
-                String[] userData1 = {user, pass, "0"};
-
-                try {
-                    FileWriter fileWriter = new FileWriter(filePath, true);
-
-                    fileWriter.append("\n");
-
-                    // write user data
-                    fileWriter.append(userData1[0]);
-                    fileWriter.append(",");
-                    fileWriter.append(userData1[1]);
-                    fileWriter.append(",");
-                    fileWriter.append(userData1[2]);
-
-
-                    fileWriter.close();
-                    System.out.println("Data written to CSV file successfully!");
-                } catch (IOException e) {
-                    System.err.println("Error writing data to CSV file: " + e.getMessage());
-                }
-
-                System.out.println("Valid Details - adding account");
-            } else {
-                System.out.println("Invalid Details");
-            }
-        } else {
-            //something went wrong
-            System.out.println("Something went wrong");
-        }
-
-
+//        else if (choice == 2) {
+//            //write to file
+//            System.out.println("Username: ");
+//            String user = sc.nextLine();
+//            System.out.println("Confirm: ");
+//            String confirmUser = sc.nextLine();
+//
+//            System.out.println("\n");
+//
+//            System.out.println("Password: ");
+//            String pass = sc.nextLine();
+//            System.out.println("Confirm: ");
+//            String confirmPass = sc.nextLine();
+//
+//            if(user.equals(confirmUser) && pass.equals(confirmPass)) {
+//
+//                //add account to CSV
+//                String filePath = "files/Customers.csv";
+//                String[] userData1 = {user, pass, "0"};
+//
+//                try {
+//                    FileWriter fileWriter = new FileWriter(filePath, true);
+//
+//                    fileWriter.append("\n");
+//
+//                    // write user data
+//                    fileWriter.append(userData1[0]);
+//                    fileWriter.append(",");
+//                    fileWriter.append(userData1[1]);
+//                    fileWriter.append(",");
+//                    fileWriter.append(userData1[2]);
+//
+//
+//                    fileWriter.close();
+//                    System.out.println("Data written to CSV file successfully!");
+//                } catch (IOException e) {
+//                    System.err.println("Error writing data to CSV file: " + e.getMessage());
+//                }
+//
+//                System.out.println("Valid Details - adding account");
+//            } else {
+//                System.out.println("Invalid Details");
+//            }
+//        } else {
+//            //something went wrong
+//            System.out.println("Something went wrong");
+//        }
 
     }
 
