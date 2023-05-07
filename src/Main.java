@@ -9,6 +9,11 @@ import javax.swing.*;
 public class Main {
 
     public static void main(String[] args) throws IOException {
+
+        JFrame dashboard = new Dashboard();
+        dashboard.setVisible(true);
+
+
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Login (1) or new Account (2) ");
@@ -26,47 +31,7 @@ public class Main {
 
 
         if (choice == 1) {
-
-            //open new GUI for login
-            JFrame login = new Login();
-            login.setVisible(true);
-
-//            System.out.println("Username: ");
-//            String user = sc.nextLine();
-//
-//            System.out.println("Password: ");
-//            String pass = sc.nextLine();
-
-//            String user = ((Login) login).getUser();
-//            String pass = ((Login) login).getPass();
-
-
-//            printArray(usernames, "Username");
-//            printArray(passwords, "Password");
-
-//            boolean found = false;
-//
-//            for (int i = 0; i < usernames.length; i++) {
-//                //checking username
-//                if(user.equals(usernames[i])) {
-//                    //checking password
-//                    if (pass.equals(passwords[i])) {
-//                        //both checks passed
-//                        found = true;
-//                        System.out.println("Access Granted");
-//                    }
-//                    break;
-//                }
-//            }
-//
-//            if (found == false) {
-//                System.out.println("Invalid Details");
-//            } else {
-//                //OPEN NEW WINDOW
-////				JFrame frame = new JFrame("Logged In");
-////				frame.setVisible(true);
-//            }
-
+            //do nothing cus GUI exists
         }
         else if (choice == 2) {
             //write to file
@@ -175,7 +140,6 @@ public class Main {
         }
         return false;
     }
-
 
     public static String[][] readFile() throws IOException{
         String filePath = "files/Customers.csv";

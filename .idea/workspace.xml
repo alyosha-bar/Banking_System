@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71aa833a-209c-404f-8b14-84d06bebe060" name="Changes" comment="Adding basis of &quot;Registration&quot; system">
-      <change afterPath="$PROJECT_DIR$/src/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
+    <list default="true" id="71aa833a-209c-404f-8b14-84d06bebe060" name="Changes" comment="Start work on GUI with functional login system and beginnings of a Menu GUI.">
+      <change afterPath="$PROJECT_DIR$/src/Dashboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/Customers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/files/Customers.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,11 +92,19 @@
       <option name="project" value="LOCAL" />
       <updated>1683218665214</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Start work on GUI with functional login system and beginnings of a Menu GUI.">
+      <created>1683381598627</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683381598627</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding basis of &quot;Registration&quot; system" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding basis of &quot;Registration&quot; system" />
+    <MESSAGE value="Start work on GUI with functional login system and beginnings of a Menu GUI." />
+    <option name="LAST_COMMIT_MESSAGE" value="Start work on GUI with functional login system and beginnings of a Menu GUI." />
   </component>
 </project>
