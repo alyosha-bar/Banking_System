@@ -41,14 +41,11 @@ public class Main {
             }
         }
 
-        if (!found) {
-            System.out.println("Invalid Details");
-        } else {
+        if (found) {
             //OPEN NEW WINDOW
-				JFrame menu = new Menu();
-				menu.setVisible(true);
+            JFrame menu = new Menu();
+            menu.setVisible(true);
         }
-
         return found;
     }
 

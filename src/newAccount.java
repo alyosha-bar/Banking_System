@@ -114,7 +114,7 @@ public class newAccount extends JFrame{
                     }
                     System.out.println("Valid Details - adding account");
                 } else {
-                    System.out.println("Invalid Details");
+                    JOptionPane.showMessageDialog(getParent(),"Invalid Details");
                 }
             }
         });

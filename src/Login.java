@@ -55,24 +55,18 @@ public class Login extends JFrame {
         login.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-//                System.out.println(getUser());
-//                System.out.println(getPass());
-
                 String user = getUser();
                 String pass = getPass();
-
                 try {
                     boolean found = Main.checkDetails(user, pass);
                     if(found) {
                         setVisible(false);
+                    } else {
+                        JOptionPane.showMessageDialog(getParent(),"Invalid Login");
                     }
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
                 }
-
-
-                System.out.println("button pressed");
             }
         });
 
