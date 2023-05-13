@@ -61,6 +61,15 @@ public class Login extends JFrame {
                     boolean found = Main.checkDetails(user, pass);
                     if(found) {
                         setVisible(false);
+
+                        //Set a working account
+                        Customer workingCustomer = new Customer();
+                        workingCustomer.setUsername(user);
+                        workingCustomer.setPassword(pass);
+
+                        //set the working balance by reading file.
+
+
                     } else {
                         JOptionPane.showMessageDialog(getParent(),"Invalid Login");
                     }
